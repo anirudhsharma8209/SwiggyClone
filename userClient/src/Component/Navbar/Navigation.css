@@ -1,0 +1,7 @@
+.logoIcon img{
+    height: 80px;
+    mix-blend-mode:darken;
+}
+.cartIcon i:hover{
+    color: #fc8019;
+}

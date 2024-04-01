@@ -2,7 +2,7 @@ import React, { Fragment, useEffect, useState } from 'react'
 import MenuCrousel from '../Crousel/MenuCrousel'
 import axios from 'axios'
 
-const Menu = () => {    
+const MenuModal = () => {    
     const [tranding, setTranding] = useState()
     const fetchDishes = async () => {
         await axios.get('https://food-sale-server.vercel.app/api/restaurants').then(data => setTranding(data?.data?.data?.cards[0].card.card?.imageGridCards?.info));
@@ -16,15 +16,14 @@ const Menu = () => {
                 <div className="modal-dialog">
                     <div className="modal-content">
                         <div className="modal-header">
-                            <h1 className="modal-title fs-5" id="exampleModalLabel">Our Dishes Menu</h1>
+                            <h1 className="modal-title fs-5" id="exampleModalLabel">Our Dishes</h1>
                             <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div className="modal-body">                        
                             <MenuCrousel tranding={tranding} />
                         </div>
                         <div className="modal-footer">
-                            <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                            <button type="button" className="btn btn-primary">Save changes</button>
+                            <button type="button" className="btn text-white" style={{backgroundColor: '#fc8019'}} data-bs-dismiss="modal">Close</button>                            
                         </div>
                     </div>
                 </div>
@@ -33,4 +32,4 @@ const Menu = () => {
     )
 }
 
-export default Menu
+export default MenuModal

@@ -16,7 +16,7 @@ const Loader = () => {
     return (
         <Fragment>
             <div className="container-fluid d-flex justify-content-center align-items-center bg-light" ref={body} style={{ height: "10rem" }}>
-                <div className="spinner mt-5 d-block">
+                <div className="spinner d-block">
                     <svg viewBox="25 25 50 50" className='mt-5'>
                         <circle cx="50" cy="50" r="20" fill="none" className="path"></circle>
                     </svg>

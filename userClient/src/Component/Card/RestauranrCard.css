@@ -1,0 +1,7 @@
+.imgContainer{
+    height: 200px;
+    background-size: cover;    
+    background-position: center;
+    box-shadow: 10px 9px 4px rgb(227, 227, 227);
+    width : 200px;
+}

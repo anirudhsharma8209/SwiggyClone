@@ -2,7 +2,7 @@ import React, { Fragment, useState } from 'react'
 import './Navigation.css'
 import { Link } from 'react-router-dom'
 
-const Navigation = () => {
+const Navigation = ({setNavbar}) => {
     let [navigation, setNavigation] = useState(["Home", "About" , "Trading", "Restaurants"]);
     return (
         <Fragment>
@@ -19,9 +19,11 @@ const Navigation = () => {
                         }
                     </div>                    
                     <div className="iconsContainer d-flex w-25 justify-content-evenly">
-                        <div className="userProfile bg-black rounded-2">
-                            <i className="bi bi-person-add text-white m-2 fs-5"></i>
-                        </div>
+                        <Link to="/registration" onClick={() => setNavbar(false)}>
+                            <div className="userProfile bg-black rounded-2">
+                                <i className="bi bi-person-add text-white m-2 fs-5"></i>
+                            </div>
+                        </Link>
                         <div className="cartIcon bg-black rounded-2">
                             <i className="bi bi-cart fs-5 m-2 text-white"></i>
                         </div>
